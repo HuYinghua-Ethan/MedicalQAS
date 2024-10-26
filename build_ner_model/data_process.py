@@ -53,18 +53,10 @@ for i in range(len(lines)):
 label_map['O'] = len(label_map)
 
 
-
-
-
 # with open(label_map_path, 'w', encoding='utf-8') as f:
 #     f.write(json.dumps(label_map, ensure_ascii=False, indent=2))
 
 
 with open(vocab_path, 'w', encoding='utf-8') as f:
     f.write(json.dumps(vocab, ensure_ascii=False, indent=2))
-
-
-
-
-
 
