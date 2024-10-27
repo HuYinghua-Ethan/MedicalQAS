@@ -54,13 +54,13 @@ class Evaluator:
             else:
                 if in_four_sequence:
                     # 记录范围：从1开始到最后一个4的结束位置
-                    entities.append((start_one_index, i - 1))
+                    entities.append((start_one_index, i))
                     in_four_sequence = False
                     start_one_index = -1  # 重置
 
         # 处理序列结束时仍然在4的情况
         if in_four_sequence and start_one_index != -1:
-            entities.append((start_one_index, len(labels) - 1))
+            entities.append((start_one_index, len(labels)))
         return entities
 
     def decode(self, sentence, labels):
